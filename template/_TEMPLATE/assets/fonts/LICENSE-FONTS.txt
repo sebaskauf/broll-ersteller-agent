@@ -1,0 +1,8 @@
+Die Fonts in diesem Ordner sind unter der SIL Open Font License 1.1 lizenziert:
+
+- f0.woff2 — Inter (Copyright The Inter Project Authors, https://github.com/rsms/inter)
+- f1.woff2 — JetBrains Mono (Copyright JetBrains s.r.o., https://github.com/JetBrains/JetBrainsMono)
+- f2.woff2 — Newsreader (Copyright The Newsreader Project Authors, https://github.com/productiontype/Newsreader)
+- f3.woff2 — Newsreader Italic (dito)
+
+Volltext der SIL OFL 1.1: https://openfontlicense.org/open-font-license-official-text/

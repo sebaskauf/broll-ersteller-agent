@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>08 Handoff schreiben</title>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:block;src:url("assets/fonts/f0.woff2") format("woff2");}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 700;font-display:block;src:url("assets/fonts/f1.woff2") format("woff2");}
+html,body{margin:0;padding:0;background:#FAF9F5;}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#FAF9F5;font-family:'Inter',sans-serif;}
+.tex{position:absolute;inset:-10%;opacity:.5;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><g stroke='%23EBE7DD' stroke-width='2' fill='none' stroke-linecap='round'><path d='M40 120 Q 220 90 460 160'/><path d='M-20 360 Q 260 320 540 400'/><path d='M120 560 Q 320 520 600 600'/></g></svg>");background-size:600px 600px;}
+.kicker{position:absolute;top:176px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:21px;letter-spacing:.3em;color:#8A8578;white-space:nowrap;will-change:opacity,transform;}
+.kicker b{color:#DA7756;}
+
+.ed{position:absolute;left:460px;top:258px;width:1000px;height:552px;background:#FFFFFF;border:1px solid #E8E4DA;border-radius:20px;box-shadow:0 46px 92px -34px rgba(60,50,35,.42);overflow:hidden;will-change:transform,opacity;}
+.eb{height:52px;background:#F3F1EC;border-bottom:1px solid #E6E3DA;display:flex;align-items:center;position:relative;}
+.dots{display:flex;gap:8px;padding-left:18px;}
+.dots i{width:12px;height:12px;border-radius:50%;display:inline-block;}
+.dr{background:#F05A4F;}.dy{background:#F6BE3F;}.dg{background:#5FC15A;}
+.et{position:absolute;left:0;right:0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:15px;color:#8A8578;font-weight:700;}
+.wr{position:absolute;right:16px;top:12px;display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#B85939;}
+.wr .sp{color:#DA7756;font-size:18px;line-height:1;display:inline-block;will-change:transform;}
+.ebody{padding:26px 40px;font-family:'JetBrains Mono',monospace;font-size:21px;line-height:1.75;}
+.sec{margin-bottom:20px;will-change:opacity;}
+.sh2{color:#B85939;font-weight:700;will-change:opacity;}
+.cur{display:inline-block;width:11px;height:22px;background:#DA7756;transform:translateY(4px);margin-left:2px;opacity:0;will-change:opacity;}
+.li{display:flex;align-items:center;gap:12px;margin-top:9px;opacity:0;will-change:opacity,transform;}
+.li .dash{color:#B0AB9E;font-weight:700;flex:none;}
+.li .bar{height:12px;border-radius:6px;background:#E7E3D8;display:inline-block;}
+.li .hl{background:#F4C9A8;}
+.savebar{position:absolute;left:40px;right:40px;bottom:22px;display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:14px;color:#8A8578;opacity:0;will-change:opacity,transform;}
+.savebar .ck{width:22px;height:22px;border-radius:50%;background:#2FA35B;display:flex;align-items:center;justify-content:center;flex:none;}
+.savebar b{color:#15803D;}
+
+.foot{position:absolute;left:50%;bottom:140px;transform:translateX(-50%);display:flex;gap:14px;align-items:center;background:#141413;color:#FAF9F5;border-radius:100px;padding:15px 34px;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;letter-spacing:.14em;white-space:nowrap;will-change:transform,opacity;}
+.foot .sp{color:#DA7756;font-size:26px;line-height:1;display:inline-block;will-change:transform;}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-start="0" data-width="1920" data-height="1080" data-duration="5">
+  <div class="tex" data-layout-ignore></div>
+  <div class="kicker" id="kick">STATTDESSEN&nbsp;&middot;&nbsp;<b>SESSION-HANDOFF</b>&nbsp;SCHREIBEN&nbsp;LASSEN</div>
+
+  <div class="ed" id="ed">
+    <div class="eb">
+      <div class="dots"><i class="dr"></i><i class="dy"></i><i class="dg"></i></div>
+      <span class="et">session-handoff.md</span>
+      <span class="wr"><span class="sp" id="spW">&#10035;</span>Claude&nbsp;schreibt&nbsp;&hellip;</span>
+    </div>
+    <div class="ebody">
+      <div class="sec" id="s1">
+        <span class="sh2" id="h1"></span><span class="cur" id="c1"></span>
+        <div class="li" id="l11"><span class="dash">-</span><span class="bar" style="width:430px"></span></div>
+        <div class="li" id="l12"><span class="dash">-</span><span class="bar hl" style="width:300px"></span></div>
+      </div>
+      <div class="sec" id="s2">
+        <span class="sh2" id="h2"></span><span class="cur" id="c2"></span>
+        <div class="li" id="l21"><span class="dash">-</span><span class="bar" style="width:370px"></span></div>
+        <div class="li" id="l22"><span class="dash">-</span><span class="bar" style="width:480px"></span></div>
+      </div>
+      <div class="sec" id="s3">
+        <span class="sh2" id="h3"></span><span class="cur" id="c3"></span>
+        <div class="li" id="l31"><span class="dash">-</span><span class="bar hl" style="width:410px"></span></div>
+        <div class="li" id="l32"><span class="dash">-</span><span class="bar" style="width:260px"></span></div>
+      </div>
+    </div>
+    <div class="savebar" id="save">
+      <span class="ck"><svg width="12" height="12" viewBox="0 0 16 16"><path d="M3 8.5 L6.5 12 L13 4.5" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span><b>gespeichert</b>&nbsp;&middot;&nbsp;kompletter&nbsp;Kontext&nbsp;gesichert</span>
+    </div>
+  </div>
+
+  <div class="foot" id="foot"><span class="sp" id="spF">&#10035;</span>DER&nbsp;FORTSCHRITT&nbsp;IST&nbsp;SICHER</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+tl.from('#kick',{y:-24,opacity:0,duration:.5,ease:'power2.out'},0.1);
+tl.from('#ed',{y:64,opacity:0,scale:.97,duration:.7,ease:'power3.out'},0.16);
+
+/* three sections type themselves, list bars slide in */
+const secs=[
+  ['#h1','#c1','## Stand des Projekts',0.7,['#l11','#l12']],
+  ['#h2','#c2','## Getroffene Entscheidungen',1.9,['#l21','#l22']],
+  ['#h3','#c3','## Nächste Schritte',3.1,['#l31','#l32']]
+];
+secs.forEach(([h,c,txt,at,lis])=>{
+  const el=document.querySelector(h); const o={i:0};
+  tl.to(c,{opacity:1,duration:.05},at);
+  tl.to(o,{i:txt.length,duration:.75,ease:'steps('+txt.length+')',onUpdate:()=>{el.textContent=txt.slice(0,Math.round(o.i));}},at);
+  tl.to(c,{opacity:0,duration:.1},at+.8);
+  lis.forEach((li,j)=>{
+    tl.fromTo(li,{opacity:0,x:-16},{opacity:1,x:0,duration:.35,ease:'power2.out'},at+.85+j*.2);
+  });
+});
+
+/* save confirmation */
+tl.fromTo('#save',{opacity:0,y:12},{opacity:1,y:0,duration:.45,ease:'back.out(1.8)'},4.2);
+tl.to('#ed',{boxShadow:'0 46px 104px -28px rgba(47,163,91,.4)',duration:.5,ease:'power1.out'},4.25);
+
+/* spark writes the whole time */
+tl.to('#spW',{rotation:340,duration:4.3,ease:'none'},0.5);
+tl.from('#foot',{y:40,opacity:0,duration:.5,ease:'back.out(1.6)'},3.7);
+tl.to('#spF',{rotation:200,duration:4.4,ease:'none'},0.4);
+window.__timelines["root"] = tl;
+</script>
+</body>
+</html>

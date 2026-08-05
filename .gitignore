@@ -1,0 +1,5 @@
+.qa/
+out/
+*.mp4
+.DS_Store
+*.bak-*
