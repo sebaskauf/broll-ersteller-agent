@@ -1,7 +1,12 @@
-# SKAILE B-Roll-Set — Ablauf-Checkliste (pro Set einmal durchgehen)
+# B-Roll-Set — Ablauf-Checkliste (pro Set einmal durchgehen)
 
 Diese Liste ist verbindlich. Reihenfolge einhalten, nichts überspringen.
 Das Master-Template liegt in `_TEMPLATE/` — IMMER kopieren, nie von Null bauen.
+
+## 0. Stil laden
+- [ ] `stil.md` (in diesem Ordner) lesen — Farben, Stimmung, Format, No-Gos des Nutzers
+- [ ] Fehlt die `stil.md` → STOP, erst das Setup-Interview aus dem Agent fahren (keine B-Rolls ohne Stil)
+- [ ] Template-Farben beim Bauen durch die stil.md-Werte ersetzen (außer stil.md sagt "Beispiel-Stil übernehmen")
 
 ## 1. Teile mappen
 - [ ] Genannte Teile nummeriert rausschreiben: Teil N = Comp N (exakt, nicht mehr, nicht weniger)

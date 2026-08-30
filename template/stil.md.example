@@ -1,0 +1,32 @@
+# Mein B-Roll-Stil
+
+> Diese Datei entsteht beim Setup-Interview und heißt dann `stil.md` (im selben Ordner).
+> Sie ist normaler Text: jederzeit selbst editierbar. Der Agent liest sie vor jedem Set.
+
+## Farben
+| Rolle | Wert |
+|---|---|
+| Hintergrund (Full-Frame) | #FAF9F5 |
+| Karten / Flächen | #FFFFFF, Border #E8E4DA |
+| Dunkle Flächen (Pills, Terminals) | #141413 |
+| Leitakzent | #DA7756 |
+| Erfolg / Fehler | #2FA35B / #DF5B4C |
+| Text / muted | #3A3733 / #8A8578 |
+
+## Grundstimmung
+hell
+
+## Schriftgefühl
+technisch-editorial (Template-Fonts übernehmen)
+
+## Format
+16:9 quer (1920x1080) — Wichtiges in die Bildmitte, beim Schnitt wird gezoomt
+
+## Meine Themen / Zielgruppe
+[aus dem Interview]
+
+## No-Gos (hartes Gesetz)
+- [aus dem Interview: Stile, Farben, Elemente, Wörter die nie auftauchen]
+
+## Higgsfield
+nein  <!-- ja = Agent darf auf Wunsch Cover-/First-Frame-Bilder über die Higgsfield-Verbindung erzeugen (kostet Credits, fragt vorher) -->

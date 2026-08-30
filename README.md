@@ -2,20 +2,21 @@
 
 Ein Claude-Code-Agent, der aus einem Kurzvideo-Skript (Instagram/TikTok Reels) fertige B-Roll-MP4s produziert — end-to-end: Skript-Teile mappen, pro Teil eine animierte Metapher bauen (HTML + GSAP via [HyperFrames](https://www.npmjs.com/package/hyperframes)), QA-Checks, rendern, visuell verifizieren, Ordner öffnen. Du ziehst die Clips nur noch in CapCut.
 
-Destilliert aus vielen Monaten täglicher Produktion und Feedback-Runden. Der Stil ("SKAILE-Stil"): heller Cream-Hintergrund, Coral-Akzent, gezeichnete SVG/CSS-Visuals statt Emojis, eine erzählende Metapher pro 5-Sekunden-Beat.
+Destilliert aus vielen Monaten täglicher Produktion und Feedback-Runden. **Wichtig: nicht kopieren, einrichten.** Beim Setup interviewt dich Claude (Markenfarben, Look, Themen, No-Gos) und schreibt deine Antworten in eine `stil.md` — ab dann sieht jedes B-Roll nach DIR aus, nicht nach dem Ersteller. Handwerk bleibt für alle gleich: gezeichnete SVG/CSS-Visuals statt Emojis, eine erzählende Metapher pro 5-Sekunden-Beat, Lint- und Augencheck vor jeder Lieferung. Optional erzeugt der Agent auch Cover-/First-Frame-Bilder, wenn du Higgsfield nutzt — ohne Higgsfield läuft alles komplett kostenlos.
 
 ## Was drin ist
 
 ```
-agent/broll-ersteller.md   → Agent-Definition (System-Prompt mit Ablauf, Stil-DNA, Fallen-Liste)
+agent/broll-ersteller.md   → Agent-Definition (System-Prompt mit Ablauf, Setup-Interview, Fallen-Liste)
 agent-memory/              → Starter-Memory: gelernte Patterns, Anti-Patterns, technische Fallen
 template/
 ├── CHECKLISTE.md          → verbindlicher Ablauf pro Set
+├── stil.md.example        → Vorlage für DEINE stil.md (entsteht beim Setup-Interview)
 ├── _TEMPLATE/             → Master-Template (index.html + lokale Fonts) — wird pro Beat kopiert
-├── examples/              → zwei fertige Beispiel-Beats zum Ansehen/Rendern
+├── examples/              → zwei fertige Beispiel-Beats zum Ansehen/Rendern (im Beispiel-Stil)
 └── assets/                → z.B. OpenAI-Logo-Path für Replicas
 install.sh                 → kopiert alles an die richtigen Stellen (mit Backup)
-SETUP-PROMPT.md            → Prompt, den du einfach in Claude Code pastest
+SETUP-PROMPT.md            → Prompt, den du einfach in Claude Code pastest (Install + Interview)
 ```
 
 ## Voraussetzungen
@@ -26,7 +27,7 @@ SETUP-PROMPT.md            → Prompt, den du einfach in Claude Code pastest
 
 ## Installation
 
-**Einfachster Weg:** Öffne Claude Code und paste den Prompt aus [`SETUP-PROMPT.md`](SETUP-PROMPT.md). Claude erledigt alles.
+**Einfachster Weg:** Öffne Claude Code und paste den Prompt aus [`SETUP-PROMPT.md`](SETUP-PROMPT.md). Claude installiert alles, interviewt dich zu deinem Stil und beweist das Setup mit einem Test-B-Roll in deinem Look.
 
 **Manuell:**
 
@@ -61,12 +62,12 @@ npx --yes hyperframes render 01-gedaechtnis-voll --quality high --output test.mp
 
 ## Anpassen
 
-Alles ist offener Text/HTML — fork das Repo und ändere:
+Alles ist offener Text/HTML:
 
-- **Stil-DNA** (Farben, Typo, Motion): in `agent/broll-ersteller.md`
+- **Dein Stil**: `~/Documents/Projects/broll-set-template/stil.md` — jederzeit editierbar, gilt sofort. Sie schlägt alle Stil-Angaben im Agent und im Memory.
 - **Master-Template**: `template/_TEMPLATE/index.html`
 - **Gelernte Patterns**: `agent-memory/*.md` — der Agent pflegt sein Memory selbst weiter, wenn du ihn korrigierst
-- **Modell**: Frontmatter `model: opus` in der Agent-Datei (z.B. auf `sonnet` ändern)
+- **Modell**: der Agent nutzt dein Session-Modell; willst du ein festes, trag `model: opus` (o.ä.) ins Frontmatter der Agent-Datei ein
 
 Hinweis: Einige Memory-Files referenzieren historisch ein privates Remotion-Projekt (`katchup-lead-automation/tiktok-broll`) — das ist nicht Teil dieses Repos. Der HyperFrames-Weg ist der Standard und vollständig enthalten.
 
